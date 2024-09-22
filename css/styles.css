@@ -1,0 +1,192 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.player {
+  width: 50%;
+  min-width: 300px;
+  text-align: left;
+}
+
+.player audio {
+  width: 100%;
+}
+
+.player ul {
+  list-style: none;
+  width: 100%;
+  min-height: 100px;
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+}
+
+.player li {
+  list-style: none;
+  margin: 0 5px 5px 5px;
+  background-color: darkgrey;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.player a {
+  color: darkred;
+  margin-right: 10px;
+  margin-left: 5px;
+  font-weight: bold;
+  position: absolute;
+}
+
+.player li span {
+  display: inline-block;
+  text-overflow: ellipsis;
+  color: darkslateblue;
+  margin-left: 20px;
+}
+
+.player li.active {
+  background-color: darkslateblue;
+}
+.player li.active span {
+  color: white;
+}
+
+.calculator {
+  background-color: darkgrey;
+  display: inline-block;
+  padding: 5px;
+  caret-color: transparent;
+}
+
+.calculator span.keypad {
+  display: inline-block;
+  border-width: 1px;
+  border-color: gray;
+  border-style: solid;
+  width: 50px;
+  height: 40px;
+  margin: 2px;
+  background-color: lightgrey;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calculator span.keypad span {
+  margin-top: 11px;
+  text-align: center;
+  display: inline-block;
+}
+
+.calculator span.outcome {
+  position: relative;
+  display: inline-block;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  width: 173px;
+  height: 40px;
+  background-color: white;
+  text-align: right;
+  vertical-align: middle;
+  border-radius: 4px;
+  font-size: x-large;
+  overflow: hidden;
+}
+
+.calculator #result {
+  position: absolute;
+  right: 5px;
+  bottom: 4px;
+  left: 5px;
+  overflow: hidden;
+  /* direction: rtl; */
+}
+
+.calendar-table {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+}
+
+.calendar-table caption {
+  /* height: 30px; */
+}
+.calendar-table th {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.calendar-table td {
+  height: 70px;
+  padding: 3px;
+  background: #eee;
+  margin: 0;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.calendar-table td.inactive {
+  background: #aaa;
+}
+
+.calendar-table .day {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: large;
+  /* font-weight: bold; */
+}
+
+.calendar-table .note {
+  text-align: right;
+  background-color: orange;
+  color: white;
+  padding: 1px 5px 1px 0;
+  font-size: x-small;
+  margin-top: 2px;
+  text-wrap: nowrap;
+}

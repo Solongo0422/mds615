@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MDS615</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li style="list-style-type: none; display: inline-block">
+            <a href="#" onclick="showmenu('section1')">Home</a>
+          </li>
+          <li style="list-style-type: none; display: inline-block">
+            <a href="#" onclick="showmenu('section2')">Calendar</a>
+          </li>
+          <li style="list-style-type: none; display: inline-block">
+            <a href="#" onclick="showmenu('section3')">Music Player</a>
+          </li>
+          <li style="list-style-type: none; display: inline-block">
+            <a href="#" onclick="showmenu('section4')">Calculator</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <!-- Home page -->
+      <section id="section1">
+        <h1>MDS615 Group Project</h1>
+
+        <div>
+          <strong>Student ID:SPI230624</strong>
+          Solongo Dookhuu
+        </div>
+        <div>
+          <strong>Student ID:SPI230627</strong>
+          Selenge Gantulga
+        </div>
+        <div>
+          <strong>Student ID:SPI230965</strong>
+          Nomin Munkhtulga
+        </div>
+        <div>
+          <strong>Student ID:SPI231048</strong>
+          Tserenbadam Tsedenjav
+        </div>
+        
+      </section>
+      <!-- Calendar menu -->
+      <section id="section2" style="display: none">
+        <div class="calendar">
+          <table class="calendar-table">
+            <caption>
+              <h2>
+                <a style="cursor: pointer" onclick="changeMonth(-1)">&lt;</a>
+                <span id="current-month">September</span>
+                <a style="cursor: pointer" onclick="changeMonth(1)">&gt;</a>
+              </h2>
+            </caption>
+            <thead>
+              <tr>
+                <th>Su</th>
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+              </tr>
+            </thead>
+            <tbody id="calendar-days"></tbody>
+          </table>
+
+          <!-- <div>
+            <h2>September</h2>
+            <h3>2024</h3>
+          </div>
+          <ul class="weekdays">
+            <li>Su</li>
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+          </ul>
+
+          <ul class="days" id="calendar-days"></ul> -->
+        </div>
+      </section>
+      <!-- Music player -->
+      <section id="section3" style="display: none">
+        <h1>Music player</h1>
+
+        <div style="text-align: -webkit-center">
+          <div class="player">
+            <input
+              type="file"
+              id="fileToUpload"
+              onchange="addMusic()"
+              accept="audio/mpeg, audio/ogg, audio/wav"
+            />
+            <audio id="audio" controls autoplay>
+              <source id="source" />
+              Your browser does not support the audio element.
+            </audio>
+            <ul id="playlist"></ul>
+          </div>
+        </div>
+      </section>
+      <!-- Calculator -->
+      <section id="section4" style="display: none">
+        <h1>Calculator</h1>
+        <div class="calculator">
+          <div>
+            <span class="keypad" onclick="clearResult();"><span>c</span></span>
+            <span class="outcome"><div id="result"></div></span>
+          </div>
+
+          <div>
+            <span class="keypad" onclick="clickNumber('7');">
+              <span>7</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('8');">
+              <span>8</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('9');">
+              <span>9</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('+');">
+              <span>+</span>
+            </span>
+          </div>
+
+          <div>
+            <span class="keypad" onclick="clickNumber('4');">
+              <span>4</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('5');">
+              <span>5</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('6');">
+              <span>6</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('-');">
+              <span>-</span>
+            </span>
+          </div>
+
+          <div>
+            <span class="keypad" onclick="clickNumber('1');">
+              <span>1</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('2');">
+              <span>2</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('3');">
+              <span>3</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('/');">
+              <span>/</span>
+            </span>
+          </div>
+
+          <div>
+            <span class="keypad" onclick="clickNumber('0');">
+              <span>0</span>
+            </span>
+            <span class="keypad" onclick="clickNumber('.');">
+              <span>.</span>
+            </span>
+            <span class="keypad" onclick="clickEquals();"><span>=</span></span>
+            <span class="keypad" onclick="clickNumber('*');">
+              <span>*</span>
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Web Scaffold Project</p>
+    </footer>
+
+    <script src="js/aws-sdk-2.813.0.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.813.0.min.js"></script> -->
+  </body>
+</html>
